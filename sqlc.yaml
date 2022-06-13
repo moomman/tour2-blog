@@ -1,0 +1,12 @@
+version: "1"
+packages:
+  - name: "db"  #默认的搜索路径是从sqlc.yaml所在的位置开始查询
+    path: "internal/dao/db/sqlc"       # 生成代码的路径
+    queries: "internal/dao/db/query"   #查询语句存放的地方
+    schema: "internal/dao/db/migration"                         #存放表结构的地方
+    engine: "mysql"
+    emit_json_tags: true # 将json放到标签
+    emit_empty_slices: true # 查不到值返回空切片
+    emit_interface: true # 生成包含查询结构所有功能的接口
+    emit_result_struct_pointers: true # 生成查询结果结构指针
+    emit_params_struct_pointers: true # 生成查询参数结构指针
