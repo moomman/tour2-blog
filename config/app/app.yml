@@ -1,0 +1,16 @@
+Mysql:
+  DriverSourceName: mysql
+  DataSourceName: "root:123456@tcp(127.0.0.1:3366)/blog?characterEncoding=utf8&serverTimezone=GMT+8&parseTime=true"
+  MaxIdleConn: 10
+  MaxOpenConn: 30
+App:
+  DefaultPageSize: 10
+  MaxPageSize: 100
+  LogSavePath: storge/log
+  LogFileName: app
+  LogFileExt: .log
+Server:
+  Port: 8080
+  RunMode: debug
+  ReadTimeOut: 60
+  WriteTimeOut: 60
