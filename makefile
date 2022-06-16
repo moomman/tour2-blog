@@ -11,4 +11,6 @@ install_golang-cli: # 安装golang-cli工具，用于静态检查代码质量
 goimports_install: # goimports安装
 	go get golang.org/x/tools/cmd/goimports
 sqlc:#sqlc生成代码
-	sqlc generate
+	sqlc generate && git add .
+run:
+	go build -o bin/main main.go && ./bin/main
